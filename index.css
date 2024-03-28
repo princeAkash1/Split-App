@@ -82,3 +82,38 @@ table th {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
 }
+/* Keyframes for desktop */
+@keyframes desktop {
+    0% {
+        font-size: 14px;
+    }
+    100% {
+        font-size: 16px;
+    }
+}
+
+/* Keyframes for mobile */
+@keyframes mobile {
+    0% {
+        font-size: 12px;
+    }
+    100% {
+        font-size: 14px;
+    }
+}
+
+/* Apply animation to specific elements */
+.app-title {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: desktop 1s ease-in-out alternate infinite; /* Apply desktop keyframes */
+}
+
+@media (max-width: 768px) {
+    /* Apply mobile keyframes inside media query for screens smaller than 768px */
+    .app-title {
+        animation: mobile 1s ease-in-out alternate infinite; /* Apply mobile keyframes */
+    }
+}
+
+
