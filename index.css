@@ -107,9 +107,13 @@ table th {
 }
 
 @media (max-width: 768px) {
-    table td, table th {
-        display: block;
-        width: 100%;
+    table {
+        overflow-x: auto;
+    }
+
+    table th,
+    table td {
+        white-space: nowrap;
     }
 }
 
