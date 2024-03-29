@@ -176,7 +176,8 @@ function updateTransactionTable() {
     tbody.innerHTML = ""; 
     var transactions = JSON.parse(localStorage.getItem("transactions")) || [];
     transactions.forEach(function(transaction, index) {
-        var newRow1 = "<tr><td>" + (index + 1) + "</td>"
+        var newRow1 =
+        
                     + "<td>" + transaction.amount + "</td>"
                     + "<td>" + transaction.purpose + "</td>"
                     + "<td>" + transaction.paidBy + "</td>"
