@@ -110,9 +110,10 @@ table th {
 @media only screen and (max-width: 768px) {
     table th,
     table td {
-        max-width: 150px; /* Adjust as needed */
+        max-width: calc(100% / 7); 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 }
+
