@@ -139,10 +139,17 @@ function getCheckedPersons() {
     return checkedPersons;
 }
 
-function sendMessage(amount, purpose) {
+
+function sendMessage(amount, purpose,phone) {
+    var phoneNumber = phone; 
+
     var message = "You need to pay " + amount + " rupees for " + purpose;
-    alert("Message sent: " + message); 
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+
+    window.open(whatsappLink);
 }
+
+
 function saveTransaction(transaction) {
     debugger
     var transactions = JSON.parse(localStorage.getItem('transactions')) || [];
@@ -176,8 +183,7 @@ function updateTransactionTable() {
     tbody.innerHTML = ""; 
     var transactions = JSON.parse(localStorage.getItem("transactions")) || [];
     transactions.forEach(function(transaction, index) {
-        var newRow1 =
-        
+        var newRow1 = "<tr><td>" + (index + 1) + "</td>"
                     + "<td>" + transaction.amount + "</td>"
                     + "<td>" + transaction.purpose + "</td>"
                     + "<td>" + transaction.paidBy + "</td>"
