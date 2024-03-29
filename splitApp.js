@@ -144,7 +144,7 @@ function sendMessage(amount, purpose,phone) {
     var phoneNumber = phone; 
 
     var message = "You need to pay " + amount + " rupees for " + purpose;
-    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+    var whatsappLink = 'https://web.whatsapp.com/' + phoneNumber + '?text=' + encodeURIComponent(message);
 
     window.open(whatsappLink);
 }
