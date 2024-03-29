@@ -107,8 +107,9 @@ table th {
 }
 
 @media (max-width: 768px) {
-    table th, table td {
-        min-width: 100px;
+    table td, table th {
+        display: block;
+        width: 100%;
     }
 }
 
